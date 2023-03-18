@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytestg/BottomNavigation/view.dart';
 import 'package:mytestg/Login/view/container.dart';
 
 class Login extends StatelessWidget {
@@ -12,7 +13,13 @@ class Login extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavigations(),
+                  ));
+            },
             child: const Containers(
               itemsSvg: 'asset/svg/google-color-svgrepo-com.svg',
               items: 'Login with Google',
